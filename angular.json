@@ -130,6 +130,41 @@
           }
         }
       }
+    },
+    "dialog": {
+      "root": "projects/dialog",
+      "sourceRoot": "projects/dialog/src",
+      "projectType": "library",
+      "prefix": "PREFIX",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/dialog/tsconfig.lib.json",
+            "project": "projects/dialog/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/dialog/src/test.ts",
+            "tsConfig": "projects/dialog/tsconfig.spec.json",
+            "karmaConfig": "projects/dialog/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/dialog/tsconfig.lib.json",
+              "projects/dialog/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-dialog-notek"

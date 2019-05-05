@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "dialog": [
+        "dist/dialog"
+      ],
+      "dialog/*": [
+        "dist/dialog/*"
+      ]
+    }
   }
 }

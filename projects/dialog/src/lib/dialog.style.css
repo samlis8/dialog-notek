@@ -1,0 +1,493 @@
+.notek-dialog {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 999999;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .3);
+}
+.notek-dialog.nobg {
+    background-color: transparent;
+}
+
+.notek-dialog-box {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 2px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+    .notek-dialog-box {
+        width: 80%;
+    }   
+}
+
+.notek-dialog-header {
+    position: relative;
+    background-color: #eee;
+}
+.notek-dialog-header h4 {
+    color: #555;
+    line-height: 50px;
+    font-size: 1.25rem;
+    font-weight: normal;
+    padding: 0 1.125rem;
+}
+.notek-dialog-header .notek-dialog-delete {
+    top: 12px;
+    width: 25px;
+    height: 25px;
+    color: #555;
+    right: 1.125rem;
+    font-size: 1.5rem;
+    position: absolute;
+}
+.notek-dialog-header .notek-dialog-delete:after, .notek-dialog-header .notek-dialog-delete:before {
+    top: 50%;
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    background-color: #555;
+}
+.notek-dialog-header .notek-dialog-delete:after {
+    transform: rotate(-45deg);
+}
+.notek-dialog-header .notek-dialog-delete:before {
+    transform: rotate(45deg);
+}
+
+.notek-dialog-content {
+    padding: 1rem;
+    overflow: auto;
+    max-height: 800px;
+}
+@media (max-width: 768px) {
+    .notek-dialog-content {
+        max-height: 435px;
+    }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+    .notek-dialog-content {
+        max-height: 600px;
+    }
+}
+.notek-dialog-content.center {
+    text-align: center;
+    font-size: 1.125rem;
+}
+.notek-dialog-content.center i {
+    display: block;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+.notek-dialog-content.center i.success {
+    color: #0ec596;
+}
+.notek-dialog-content.center i.failed {
+    color: #f86641;
+}
+.notek-dialog-content.center i.warning {
+    color: #dba212;
+}
+
+.notek-dialog-footer {
+    font-size: 0;
+    padding: 1rem;
+    text-align: right;
+    border-top: 1px solid #eee;
+}
+.notek-dialog-footer button:first-child {
+    margin-right: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+body, 
+html {
+    color: #333;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    text-rendering: geometricPrecision;
+    font-family: Helvetica Neue,Helvetica,Tahoma,lantinghei sc,Hiragino Sans GB,Microsoft YaHei,sans-serif!important;
+}
+
+a {
+    color: #009afc;
+    text-decoration: none;
+}
+a:hover {
+    transition: all .3s;
+}
+
+ul {
+    margin-top: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 默认按钮 */
+.notek-btn {
+    color: #fff;
+    border: none;
+    outline: none;
+    line-height: 1;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 8px 14px;
+    border-radius: 2px;
+    transition: all .2s;
+    background-color: #828485;
+    border: 1px solid #828485;
+    backface-visibility: hidden;
+}
+.notek-btn > i {
+    width: 14px;
+}
+.notek-btn:not(.notek-btn-disabled):hover {
+    color: rgba(0, 0, 0, .3)!important;
+}
+.notek-btn:not(.notek-btn-disabled):active {
+    transform: scale(1.1);
+}
+/* 按钮 */
+.notek-btn.notek-btn-primary {
+    border-color: #209cec;
+    background-color: #209cec;
+}
+.notek-btn.notek-btn-success {
+    border-color: #0ec596;
+    background-color: #0ec596;
+}
+.notek-btn.notek-btn-danger {
+    border-color: #dba212;
+    background-color: #dba212;
+}
+.notek-btn.notek-btn-peril {
+    border-color:#f86641;
+    background-color: #f86641;
+}
+.notek-btn.notek-btn-tradition {
+    color: #797979;
+    border-color: #939393;
+    background-color: transparent;
+}
+.notek-btn.notek-btn-disabled {
+    color: #b9b9b9;
+    cursor: not-allowed;
+    background-color: #fafafa;
+    border-color: #c7c7c7;
+}
+/* 按钮尺寸及风格 */
+.notek-btn.notek-btn-slim {
+    font-weight: 300;
+}
+.notek-btn.notek-btn-big {
+    padding: 12px 18px;
+    font-size: 1.125rem;
+}
+.notek-btn.notek-btn-sm {
+    padding: 6px 8px;
+    font-size: .875rem;
+}
+/* 按钮组 */
+.notek-btn-group {
+    font-size: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.notek-btn-group button {
+    border-radius: 0;
+}
+.notek-btn-group button:first-child {
+    border-radius: 2px 0 0 2px;
+}
+.notek-btn-group button:last-child {
+    border-radius: 0 2px 2px 0;
+}
+.notek-btn-group.notek-btn-group-vertical button {
+    display: block;
+}
+.notek-btn-group.notek-btn-group-vertical button:last-child,
+.notek-btn-group.notek-btn-group-vertical button:first-child {
+    border-radius: 0;
+}
+.notek-btn-group.notek-btn-group-vertical button:not(:last-child) {
+    border-bottom-color: rgba(255, 255, 255, .35);
+}
+.notek-btn-group.notek-btn-group-rim button:not(:last-child) {
+    border-right-color: rgba(255, 255, 255, .35);
+}
+.notek-btn-group-radius {
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+/* 输入框/选择框 */
+.notek-ipt,
+.notek-text {
+    font-size: 1rem;
+    border-radius: 2px;
+    transition: all .3s;
+    box-sizing: border-box;
+    width: calc(100% - 2px);
+    border: 1px solid #cecece;
+}
+.notek-ipt.error,
+.notek-text.error {
+    border-color: #f86641;
+}
+.notek-ipt {
+    margin: 0;
+    padding: 0;
+    height: 32px;
+    outline: none;
+    display: block;
+    line-height: 32px;
+    text-indent: 1rem;
+}
+.notek-text {
+    resize: none;
+    outline: none;
+    padding: .5rem;
+    box-sizing: border-box;
+}
+
+.notek-select {
+    height: 32px;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #fff;
+    width: calc(100% - 2px);
+    border: 1px solid #cecece;
+}
+/* 带label的表单 */
+.notek-form-group {
+    margin-bottom: 15px;
+}
+.notek-form-group > label {
+    max-width: 100%;
+    font-weight: 500;
+    display: inline-block;
+}
+.notek-form-group > input,
+.notek-form-group > select {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+.notek-label {
+    padding-top: 7px;
+}
+
+/* 布局 */
+.notek-md-1 {
+    width: 8.33333%;
+}
+.notek-md-2 {
+    width: 16.66666%;
+}
+.notek-md-3 {
+    width: 25%;
+}
+.notek-md-4 {
+    width: 33.33333%;
+}
+.notek-md-5 {
+    width: 41.66666%;
+}
+.notek-md-6 {
+    width: 50%;
+}
+.notek-md-7 {
+    width: 58.33333%;
+}
+.notek-md-8 {
+    width: 66.66666%;
+}
+.notek-md-9 {
+    width: 75%;
+}
+.notek-md-10 {
+    width: 83.33333%;
+}
+.notek-md-11 {
+    width: 91.66666%;
+}
+.notek-md-12 {
+    width: 100%;
+}
+.notek-md-1,
+.notek-md-2,
+.notek-md-3,
+.notek-md-4,
+.notek-md-5,
+.notek-md-6,
+.notek-md-7,
+.notek-md-8,
+.notek-md-9,
+.notek-md-10,
+.notek-md-11,
+.notek-md-12 {
+    float: left;
+    box-sizing: border-box;
+}
+/* 手机 */
+@media (max-width: 575.98px) {
+    .notek-md-1,
+    .notek-md-2,
+    .notek-md-3,
+    .notek-md-4,
+    .notek-md-5,
+    .notek-md-6,
+    .notek-md-7,
+    .notek-md-8,
+    .notek-md-9,
+    .notek-md-10,
+    .notek-md-11,
+    .notek-md-12 {
+        width: 100%;
+        float: none;
+    }
+}
+/* 间隔 */
+.notek-space10 {
+    margin-left: -5px;
+}
+.notek-space10 > * {
+    padding: 5px;
+}
+.notek-space20 {
+    margin-left: -10px;
+}
+.notek-space20 > * {
+    padding: 10px;
+}
+@media (min-width: 575.98px) {
+    .notek-offset1 {
+        margin-left: 8.33333%;
+    }
+    .notek-offset2 {
+        margin-left: 16.66666%;
+    }
+    .notek-offset3 {
+        margin-left: 25%;
+    }
+    .notek-offset4 {
+        margin-left: 33.33333%;
+    }
+    .notek-offset5 {
+        margin-left: 41.66666%;
+    }
+    .notek-offset6 {
+        margin-left: 50%;
+    }
+    .notek-offset7 {
+        margin-left: 58.33333%;
+    }
+    .notek-offset8 {
+        margin-left: 66.66666%;
+    }
+    .notek-offset9 {
+        margin-left: 75%;
+    }
+    .notek-offset10 {
+        margin-left: 83.33333%;
+    }
+    .notek-offset11 {
+        margin-left: 91.66666%;
+    }
+    .notek-offset12 {
+        margin-left: 100%;
+    }
+}
+
+/* 表格 */
+.notek-table {
+    color: #555;
+    width: 100%;
+    font-size: 1rem;
+    border-spacing: 0;
+    background-color: #fff;
+    border-collapse: collapse;
+}
+.notek-table th {
+    padding: 12px 15px;
+}
+.notek-table td {
+    padding: 9px 15px;
+}
+.notek-table th,
+.notek-table td {
+    line-height: 1.5;
+    border: 1px solid #e3e3e3;
+}
+.notek-table th {
+    color: #333;
+    text-align: left;
+    font-weight: 500;
+    background-color: #f1f1f1;
+}
+.notek-table tr {
+    transition: background-color .2s ease-in-out;
+}
+.notek-table tbody tr:hover,
+.notek-table tfoot tr:hover {
+    background-color: #f1f1f1;
+}
+/* 居中显示 */
+.notek-table.center th,
+.notek-table.center td {
+    text-align: center;
+}
+/* 隔行背景 */
+.notek-table.even tbody > tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+/* 突出表头 */
+.notek-table.highlight th {
+    color: #fff;
+    border-color: #555;
+    background-color: #555;
+}
+
+
+/* 辅助类 */
+.notek-clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.notek-con-center {
+    text-align: center !important;
+}
+.notek-con-right {
+    text-align: right !important;
+}
+/* 溢出显示省略号 */
+.txt-ellipsis {
+    line-height: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    vertical-align: text-bottom;
+}
