@@ -88,14 +88,43 @@
     font-size: 26px;
     margin-bottom: 10px;
 }
-.notek-dialog-content.center i.success {
-    color: #0ec596;
+.notek-dialog-content.center i >b {
+    width:40px;
+    height:40px;
+    border-radius:5px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
 }
-.notek-dialog-content.center i.failed {
-    color: #f86641;
+.notek-dialog-content.center i >b:after, 
+.notek-dialog-content.center i >b:before {
+    content:"";
+    position: absolute;
+    display: inline-block;
 }
-.notek-dialog-content.center i.warning {
-    color: #dba212;
+.notek-dialog-content.center i.correct >b:after {
+    top:10px;
+    left:8px;
+    width:20px;
+    height:10px;
+    border:2px solid #0ec596;
+    border-top:0;
+    border-right:0;
+    transform:rotateZ(-45deg);
+}
+.notek-dialog-content.center i.wrong >b:after,
+.notek-dialog-content.center i.wrong >b:before {
+    top:18px;
+    left:10px;
+    width:25px;
+    height:2px;
+    background:#f86641;
+}
+.notek-dialog-content.center i.wrong >b:after {
+    transform:rotateZ(-45deg);
+}
+.notek-dialog-content.center i.wrong >b:before {
+    transform:rotateZ(45deg);
 }
 
 .notek-dialog-footer {

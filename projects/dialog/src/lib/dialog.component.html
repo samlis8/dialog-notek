@@ -6,9 +6,9 @@
         </div>
         <div class="notek-dialog-content" *ngIf="type === 1" [innerHTML]="content" [ngStyle]="{'max-height': contentMaxHeight, 'height': contentHeight}"></div>
         <div class="notek-dialog-content" *ngIf="type === 2" [ngClass]="{center: icon}">
-            <i class="fa fa-check" [ngClass]="iconClass" *ngIf="icon === 1"></i>
-            <i class="fa fa-close" [ngClass]="iconClass" *ngIf="icon === 2"></i>
-            <i class="fa fa-ban" [ngClass]="iconClass" *ngIf="icon === 3"></i>
+            <i class="correct" *ngIf="icon === 1"><b></b></i>
+            <i class="wrong" *ngIf="icon === 2"><b></b></i>
+            <i class="warning" *ngIf="icon === 3"><b></b></i>
             {{content}}
         </div>
         <div class="notek-dialog-content" style="pading: 1.5rem 1rem;" *ngIf="type === 3">
@@ -34,9 +34,9 @@
         </div>
         <div class="notek-dialog-content" *ngIf="type === 1" [innerHTML]="content" [ngStyle]="{'max-height': contentMaxHeight, 'height': contentHeight}"></div>
         <div class="notek-dialog-content" *ngIf="type === 2" [ngClass]="{center: icon}">
-            <i class="fa fa-check" [ngClass]="iconClass" *ngIf="icon === 1"></i>
-            <i class="fa fa-close" [ngClass]="iconClass" *ngIf="icon === 2"></i>
-            <i class="fa fa-ban" [ngClass]="iconClass" *ngIf="icon === 3"></i>
+            <i class="correct" *ngIf="icon === 1"><b></b></i>
+            <i class="wrong" *ngIf="icon === 2"><b></b></i>
+            <i class="warning" *ngIf="icon === 3"><b></b></i>
             {{content}}
         </div>
         <div class="notek-dialog-content" style="pading: 1.5rem 1rem;" *ngIf="type === 3">
@@ -62,9 +62,9 @@
         </div>
         <div class="notek-dialog-content" *ngIf="type === 1" [innerHTML]="content" [ngStyle]="{'max-height': contentMaxHeight, 'height': contentHeight}"></div>
         <div class="notek-dialog-content" *ngIf="type === 2" [ngClass]="{center: icon}">
-            <i class="fa fa-check" [ngClass]="iconClass" *ngIf="icon === 1"></i>
-            <i class="fa fa-close" [ngClass]="iconClass" *ngIf="icon === 2"></i>
-            <i class="fa fa-ban" [ngClass]="iconClass" *ngIf="icon === 3"></i>
+            <i class="correct" *ngIf="icon === 1"><b></b></i>
+            <i class="wrong" *ngIf="icon === 2"><b></b></i>
+            <i class="warning" *ngIf="icon === 3"><b></b></i>
             {{content}}
         </div>
         <div class="notek-dialog-content" style="pading: 1.5rem 1rem;" *ngIf="type === 3">

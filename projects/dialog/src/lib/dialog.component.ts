@@ -42,7 +42,7 @@ export class DialogComponent {
     public isErrorIpt: boolean = false;
 
     // icon存在时可用.
-    public iconClass: any;
+    // public iconClass: any;
 
     private anim: string;
     private timer: any = null;
@@ -86,19 +86,19 @@ export class DialogComponent {
         }
 
         // if icon.
-        if(this.icon) {
-            switch(this.icon) {
-                case 1:
-                    this.iconClass = {success: true};
-                    break;
-                case 2:
-                    this.iconClass = {failed: true};
-                    break;
-                case 3:
-                    this.iconClass = {warning: true};
-                    break;
-            }
-        }
+        // if(this.icon) {
+        //     switch(this.icon) {
+        //         case 1:
+        //             this.iconClass = {success: true};
+        //             break;
+        //         case 2:
+        //             this.iconClass = {failed: true};
+        //             break;
+        //         case 3:
+        //             this.iconClass = {warning: true};
+        //             break;
+        //     }
+        // }
 
         if(this.preVal) {
             this.enterCon = this.preVal;
