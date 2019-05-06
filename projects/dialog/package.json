@@ -1,6 +1,6 @@
 {
   "name": "dialog-notek",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "angular4+ dialog组件 弹窗组件",
   "main": "index.js",
   "scripts": {

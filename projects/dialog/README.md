@@ -42,7 +42,7 @@ export class YourComponent {
 **参数**
 dialog.create:
     title?: string;           // 标题.
-    content?: string;         // 内容 支持html.
+    content?: string;         // 内容 支持html(仅在type为1的时候支持).
     width?: string;           // 宽度.
     contentHeight?: string;   // 内容固定高度.
     contentMaxHeight?: string;// 内容最大高度.
