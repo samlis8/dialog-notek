@@ -103,28 +103,49 @@
     display: inline-block;
 }
 .notek-dialog-content.center i.correct >b:after {
-    top:10px;
-    left:8px;
-    width:20px;
-    height:10px;
-    border:2px solid #0ec596;
-    border-top:0;
-    border-right:0;
-    transform:rotateZ(-45deg);
+    top: 10px;
+    left: 8px;
+    width: 20px;
+    height: 10px;
+    border: 2px solid #0ec596;
+    border-top: 0;
+    border-right: 0;
+    transform: rotateZ(-45deg);
 }
 .notek-dialog-content.center i.wrong >b:after,
 .notek-dialog-content.center i.wrong >b:before {
-    top:18px;
-    left:10px;
-    width:25px;
-    height:2px;
-    background:#f86641;
+    top: 18px;
+    left: 5px;
+    width: 30px;
+    height: 2px;
+    background: #f86641;
 }
 .notek-dialog-content.center i.wrong >b:after {
     transform:rotateZ(-45deg);
 }
 .notek-dialog-content.center i.wrong >b:before {
     transform:rotateZ(45deg);
+}
+.notek-dialog-content.center i.warning >b:after,
+.notek-dialog-content.center i.warning >b:before {
+    width: 30px;
+    height: 30px;
+}
+.notek-dialog-content.center i.warning >b:after {
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    border:2px solid #e7c822;
+}
+.notek-dialog-content.center i.warning >b:before {
+    top: 5px;
+    left: 5px;
+    content: "!";
+    color: #e7c822;
+    text-align: center;
+    line-height: 30px;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .notek-dialog-footer {

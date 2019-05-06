@@ -16,7 +16,7 @@ export class DialogComponent {
     @Input() width: string;
     @Input() contentHeight: string;
     @Input() contentMaxHeight: string;
-    @Input() title: string = '提示';
+    @Input() title: string = '默认标题';
     @Input() content: any = '提示内容';
     @Input() timeFn: any;
     @Input() cancelFn: any;
@@ -40,9 +40,6 @@ export class DialogComponent {
     // type为3时可用.
     public enterCon: string;
     public isErrorIpt: boolean = false;
-
-    // icon存在时可用.
-    // public iconClass: any;
 
     private anim: string;
     private timer: any = null;
@@ -69,7 +66,7 @@ export class DialogComponent {
             if(this.definiteBtnText !== '确定' || this.cancelBtnText !== '取消' || this.definiteFn || this.cancelFn) throw new TypeError('当isBtns为false时不能存在「definiteBtnText」、「cancelBtnText」、「definiteFn」或「cancelFn」参数');
         }
         if(this.isTitle === false) {
-            if(this.title) throw new TypeError('当isTitle为false时不能存在「title」参数');
+            if(this.title && this.title !== '默认标题') throw new TypeError('当isTitle为false时不能存在「title」参数');
         }
 
         if(this.type === 1) {
@@ -84,21 +81,6 @@ export class DialogComponent {
                 this.timeFn && this.timeFn();
             }, this.time);
         }
-
-        // if icon.
-        // if(this.icon) {
-        //     switch(this.icon) {
-        //         case 1:
-        //             this.iconClass = {success: true};
-        //             break;
-        //         case 2:
-        //             this.iconClass = {failed: true};
-        //             break;
-        //         case 3:
-        //             this.iconClass = {warning: true};
-        //             break;
-        //     }
-        // }
 
         if(this.preVal) {
             this.enterCon = this.preVal;

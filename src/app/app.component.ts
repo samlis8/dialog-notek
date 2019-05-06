@@ -13,25 +13,26 @@ export class AppComponent {
 
     test() {
         this.dialogSrv.create({
-            icon: 1,
+            icon: 3,
             type: 2,
             animType: 2,
-            // time: 3000,
+            time: 3000,
             isBtns: false,
-            // isTitle: false,
-            content: '我是内容',
+            title: '警告警告！',
+            content: '检测到入侵者！！！'
         });
     };
 
     test1() {
         this.dialogSrv.create({
-            icon: 2,
             type: 2,
+            icon: 1,
+            time: 3000,
             animType: 3,
-            // time: 3000,
             isBtns: false,
-            // isTitle: false,
-            content: '我是内容',
+            isTitle: false,
+            content: '恭喜，你中奖了',
+            bgClickHide: true
         });
     };
 }
