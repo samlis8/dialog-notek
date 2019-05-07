@@ -1,6 +1,6 @@
 {
   "name": "dialog-notek",
-  "version": "0.0.4",
+  "version": "0.0.41",
   "description": "angular4+ dialog组件 弹窗组件",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/notek/dialog-notek/issues"
   },
-  "homepage": "https://github.com/notek/dialog-notek",
+  "homepage": "https://github.com/notek/dialog-notek/tree/master/projects/dialog",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
