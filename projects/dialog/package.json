@@ -1,6 +1,6 @@
 {
   "name": "dialog-notek",
-  "version": "0.0.41",
+  "version": "0.0.42",
   "description": "angular4+ dialog组件 弹窗组件",
   "main": "index.js",
   "scripts": {
@@ -24,5 +24,6 @@
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": "ng-dialog dialog-notek angular angular-dialog"
 }
