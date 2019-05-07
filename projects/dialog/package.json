@@ -1,7 +1,7 @@
 {
   "name": "dialog-notek",
-  "version": "0.0.42",
-  "description": "angular4+ dialog组件 弹窗组件",
+  "version": "0.0.43",
+  "description": "angular6+ dialog组件 弹窗组件",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
