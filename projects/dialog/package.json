@@ -14,12 +14,12 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:notek/dialog-notek.git"
+    "url": "git+ssh://git@github.com:samlis8/dialog-notek.git"
   },
   "bugs": {
-    "url": "https://github.com/notek/dialog-notek/issues"
+    "url": "https://github.com/samlis8/dialog-notek/issues"
   },
-  "homepage": "https://github.com/notek/dialog-notek/tree/master/projects/dialog",
+  "homepage": "https://github.com/samlis8/dialog-notek/tree/master/projects/dialog",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
